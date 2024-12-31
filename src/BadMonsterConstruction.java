@@ -1,0 +1,3 @@
+class BadMonsterConstruction extends Exception
+{
+}

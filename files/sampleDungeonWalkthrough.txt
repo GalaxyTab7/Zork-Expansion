@@ -1,0 +1,55 @@
+take bottle
+e
+take pack
+use pack
+w
+n
+w
+fill Tap bottle
+e
+n
+e
+take mat
+examine mat
+w
+n
+use BrassKey
+n
+drink bottle
+w
+fill Sink bottle
+e
+d
+open GreenCase
+use WoodKey
+n
+take BackPack
+use BackPack
+n
+n
+n
+open Register
+take Vial
+drink Vial
+use StorageKey
+n
+take Jerryan
+s
+s
+s
+s
+w
+fill newtap JerryCan
+e
+e
+drink bottle
+break TapPipe
+fill TapPipe bottle
+w
+s
+u
+s
+s
+s
+s
+fill JerryCan Car

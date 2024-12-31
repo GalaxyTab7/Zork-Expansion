@@ -1,0 +1,3 @@
+class NoTimedObjectException extends Exception
+{
+}

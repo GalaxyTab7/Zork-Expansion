@@ -1,0 +1,462 @@
+The Gas Gauntlet
+Zork ++
+===
+Items:
+WaterBottle,bottle
+2
+Fillable:true,water,1,0
+drink[Fill(-1),Hydrate(111),Wound(-2),Score(2)]:You take a swig, you feel refreshed for a short while.
+throw[Drop]:You throw the bottle as far as you can, you will regret this later.
+---
+Pamphlet
+2
+read:It details all the wondrous casinos you’re en route to destroy your savings at.
+rip[Disappear]:In frustration, you rip the pamphlet to shreds.
+---
+Padlock
+5
+examine:A padlock you brought with you for some reason, you don’t know where the key is so you hope you won’t need it.
+useE[Lock(any~e),Disappear]:You lock the door behind you, you hope you were smart about this.
+useN[Lock(any~n),Disappear]:You lock the door behind you, you hope you were smart about this.
+useS[Lock(any~s),Disappear]:You lock the door behind you, you hope you were smart about this.
+useW[Lock(any~w),Disappear]:You lock the door behind you, you hope you were smart about this.
+useU[Lock(any~u),Disappear]:You lock the door behind you, you hope you were smart about this.
+useD[Lock(any~d),Disappear]:You lock the door behind you, you hope you were smart about this.
+---
+FannyPack,pack
+0
+use[Disappear,ImproveBag(10),Score(10)]:You feel prepared to carry more items.
+examine:You feel ashamed wearing it but you have no room for complaints in your situation.
+---
+GasPump,pump
+5000
+use:The pump hasn’t been used in ages, you aren’t going to get it to work now.
+kick[Wound(3)]:You kick the pump to try to get it to work, you think you broke a toe.
+---
+WelcomeMat,mat
+5
+examine[Transform(BrassKey),Score(5)]:You look under the mat and notice a small brass key.
+---
+BrassKey
+1
+use[Unlock(Porch~n),Disappear]:The door swings open.
+---
+PictureFrame,picture,frame
+5
+examine:A photo of a happy man next to a flourishing gas station, the frame looks loose.
+break[Transform(Photo),Score(5)]:You break the frame and take the photo out.
+---
+Photo
+2
+examine:You notice writing on the other side, it’s worn and hard to understand, all you can make out is “  e n  a e”.
+---
+RecipeBook,book
+5
+read[Score(5)]:The book is full of recipes of nothing but aspic dishes, however, there is a note on of of the pages, it is hard to read but you make out “Gr     ca   “.
+---
+TeddyBear,teddy,bear
+5
+examine:An old teddy bear that’s ripped in several places and missing an eye, there’s something hard inside it.
+squeeze[Score(5)]:You hear a garbled recording coming from inside the bear, it’s mostly static but you can make out “  e   se”.
+---
+PinkCase
+5
+open[Die]:A hoard of snakes fly out of the case, you promptly succumb to their bites.
+---
+YellowCase
+5
+open[Die]:A boxing glove springs out of the case cracking your skull and knocking you unconscious.
+---
+BlueCase
+5
+open[Transform(GoldKey)]:A shiny key sits inside the box, what luck!
+---
+GoldKey
+1
+Hallucination:true,true
+---
+RedCase
+5
+open[Transform(SilverKey)]:A small metal key sits inside the box, this is the one!
+---
+SilverKey
+1
+use[Die]:You try to open the door with the key, a jolt of electricity goes through your body killing you instantly.
+---
+GreenCase
+5
+open[Transform(WoodKey)]:A small wooden key sits inside the box, you doubt this is the key you need.
+---
+WoodKey
+1
+use[Unlock(Cellar~n),Score(10),Disappear]:The door swings open.
+---
+Tap
+5000
+Fillable:true,water,1,1
+examine:A rusty tap sticking out of the ground, there is no reason you can think for it being here so you assume it’s a gift from god.
+use[Fill(1)]:You mess around with the tap until you hear it refill.
+---
+Sink
+5000
+Fillable:true,water,1,1
+open[Wound(5)]:You open the cabinet underneath the sink, there is nothing but opened bottles of bleach, the fumes almost blind you.
+use[Fill(1)]:You turn the sink handle allowing more water to fill the tap.
+---
+Bandage
+5
+use[Wound(-10),Score(5),Disappear]:You feel reinvigorated.
+---
+WhiskeyBottle,whiskey
+5
+Fillable:false,whiskey,2,2
+drink[Fill(-1),Teleport,Hydrate(-2)]:You take a swig from the bottle and black out for a while, you can’t remember anything from after you drank.
+throw[Disappear]:You throw the bottle on the ground, it shatters into a million pieces.
+---
+WaterPot,pot
+50
+examine:A rusty pot filled with disgusting brown water.
+drink[Hydrate(5),Wound(-4)]:You take a sip from the sludge inside the pot, you are somewhat refreshed but you feel awful.
+spill[Disappear]:You knock over the pot and its foul contents spill all over you.
+---
+Letter
+1
+read:In very poor handwriting the letter reads “Choose one of my cases five, with only one will you survive”.
+---
+BackPack,pack
+0
+use[ImproveBag(20),Score(10),Disappear]:You feel prepared to carry more items.
+---
+Rat
+2
+examine:Its just a small rat, it does not want to be bothered with.
+bother[Wound(5),Disappear]:The rat scratches you in the face and scampers away into the dark, hope you're proud of yourself man.
+pet[Score(5),Wound(-5)]:The rat seems to enjoy this, as you pet the rat you start to feel a little better yourself.
+---
+TapPipe,shaft,pipe
+5000
+Fillable:true,water,1,1
+examine:You assume its connected to the tap you came across before, part of the tap is leaking a little water. You think that by breaking it some more will flow out. 
+break[Fill(1),Wound(2)]:You punch the shaft making more water spill out. That hurt like shit though. 
+---
+newtap,gastap,tap
+5000
+Fillable:false,gas,1,1
+examine:You just can't get enough of these mysterious taps, this one smells like gas which for some reason you really enjoy.
+---
+WaterGallon,gallon
+20
+Hallucination:true,true
+---
+FullTank
+20
+Hallucination:true,true
+---
+StickyNote,note
+2
+read:It reads "*Remember* left key in ___ bottle", part of the note was erased away.
+throw[Drop,Score(1)]:You crumple the note and throw it into a nearby trashcan, you made it in, nice.
+---
+Register
+15
+open[Transform(Vial),Score(5)]:The register is filled to the brim with $100 bills, but there is a cool vial in here which is all you care about.
+---
+Vial
+2
+examine:A small glass vial labeled with a skull and crossbones.
+drink[Wound(5),Transform(StorageKey),Score(5)]:It's straight ethenol. You feel like you're about to pass out but you notice a small key inside the vial.
+---
+RustedThermos,thermos
+5
+Fillable:true,water,1,0
+examine:An old decrepit thermos filled with something that is more rust than liquid.
+drink[Wound(10),Hydrate(50)]:It's just water but you can feel your body shutting down as you drink it.
+throw[Drop]:Realizing how disguisting the water is, you throw the bottle and it cracks against the floor.
+---
+Soda
+5
+examine:A regular soda bottle with a regular cola esque beverage inside.
+drink[Die]:You read the label wrong, it turns out it's actually rat poison and you lose consciousness immediatley.
+---
+StorageKey,key
+1
+use[Unlock(Register~n),Score(10),Disappear]:The door swings open.
+---
+PillBottle,pills
+5
+use[Teleport]:You swallow a few pills and black out for awhile, you have no idea where you are.
+dump[Disappear]:You dump the pills on the ground terrified of their effects.
+---
+JerryCan
+25
+Fillable:true,gas,1,0
+examine:An empty JerryCan. It's not much use right now but it may just be your saving grace.
+---
+NinjaTurtleLunchBox,lunchbox,box
+0
+examine:A sick lunch box with all your favorite turtles on it.
+use[ImproveBag(10),Score(5)]:You can fit so many things in here!
+---
+===
+Rooms:
+Car
+Fillable:gas[0]
+Contents: WaterBottle,Pamphlet,Padlock
+Your broken down car. There are miles upon miles of ever-stretching desert to the east and west of you and a seemingly endless highway to the north and south. 
+Just the sight of your car fills you with disappointment and rage.
+---
+Highway
+A seemingly endless stretch of road. The sun is beating down so hard you are tempted to fry an egg on it. The only signs of life are two small buildings in the distance. 
+---
+EndlessDesert
+Contents: FannyPack
+The desert stretches on for miles upon miles. There is no sign of life anywhere to be found and you are certain to meet death if you continue any further.
+---
+TheTap
+Contents: Tap
+A single metal tap stretches out from the ground. You have no idea why it’s here or how it’s connected to anything. But it works, which is all you care about. 
+---
+AbandonedShack
+A small abandoned shack. The windows are barred and it looks like its seconds away from collapsing. 
+You don’t know why anyone would build a shack out here and from the looks of things the people who built it felt the same way.
+---
+OldGasStation
+Contents: GasPump,WelcomeMat
+An old gas station that doesn’t look like its had any customers for years. The door inside is barred off and all you can hope for is the possibility of stealing what little gas is left in the pumps. 
+---
+Porch
+The supports holding up the roof are rotted and failing.The front door is fancy and ornate, far too out of place for a house like this.
+There is a brass doorknob with a very obvious and hard-to-miss keyhole underneath. 
+---
+LivingRoom
+Contents: PictureFrame,Bandage
+A dusty living room stuffed to the brim with random items and garbage. It doesn’t seem the a/c has worked in ages as the room is even hotter than outside.
+You can hardly see the furniture let alone the floor below you from all the clutter. You wonder how someone out in the middle of nowhere can even accumulate so much stuff.
+---
+Kitchen
+Contents: RecipeBook,Sink,WaterPot
+You can barely call this a kitchen. There is a small stove that has become more rust than stove. The sink is filled to the brim with dishes and rotting food lines the floor. 
+---
+Bedroom
+Contents: TeddyBear
+A room that used to be a child’s. It is the cleanest room in the house with a made bed and nothing scattered on the floor. 
+The wallpaper contains creepy drawings of elephants that put you on edge and make you feel watched.
+---
+Cellar
+Contents: YellowCase,PinkCase,BlueCase,RedCase,GreenCase,Letter
+A dark, almost empty room with a large iron door on the other side. Various suitcases are strewn about the place in an unorganized fashion.
+---
+Tunnel
+Contents: Rat,BackPack
+A long dark tunnel. There are various corridors off to the side leading to mysterious rooms. The walls are all dirt and no part of the tunnel looks structurally sound.
+It feels like an oven inside.
+---
+TapShaft
+Contents: TapPipe
+A dark dirt covered room that surprisingly has wooden beams holding up the ceiling. The saga of the mysterious tap continues as a long metal pipe stretches from the ceiling
+down to the floor. You can only assume it's connected to same same pipe as before. Part of the pipe is leaking considerably.
+---
+NewTap
+Contents: newtap
+A dirt covered room with rotted wooden support beams. There is a brand new mysterious tap in the middle of the room. You are delighted to uncover yet another 
+mysterious tap as you have grown a strong kinship with mysterious taps. The room smells strongly of gasoline and you are hesitant to stay long.
+---
+LongStaircase
+Contents: WaterGallon
+A long staircase with with the end encased in an intimidating shadow. The staircase is lined with a fancy red carpet.
+---
+BreakRoom
+Contents: FullTank,WhiskeyBottle
+A dusty employe break room. The walls are lined with various cat posters with convienent store puns on them. One of the posters has been used as a dart board.
+The floor is covered in empty liquor bottles and the only chair in the room has been smashed to splinters.
+---
+Register
+Contents: Register,StickyNote
+An old cash register gaurding a wall of tobacco products. The desk holding the register up is barely standing on it's own. There is a notebook next to the register 
+with the words "I hate my job" written on every page.
+---
+MainStore
+Contents: RustedThermos,NinjaTurtleLunchBox
+A state of the art convient store. Most of the product has been stolen and what hasn't has been left to rot. A knocked over shelf is leaning near a hole in the wall. 
+However it will be too high up to climb back through.
+---
+Bathroom
+Contents: Soda,PillBottle
+The smell of the bathroom is indescribable and describing the inside would result in anybody vomiting. Somebody spraypainted an Al Gore quote on the wall.
+---
+StorageRoom
+Contents: JerryCan
+A small closet pretending to be a storage room filled to the brim with out of date stock. The single light dangling from the ceiling is broken. 
+---
+===
+Exits:
+Car
+e
+EndlessDesert
+---
+Car
+n
+Highway
+---
+EndlessDesert
+w
+Car
+---
+EndlessDesert
+e
+EndlessDesert
+---
+Highway
+s
+Car
+---
+Highway
+w
+TheTap
+---
+Highway
+n
+AbandonedShack
+---
+TheTap
+e
+Highway
+---
+AbandonedShack
+s
+Highway
+---
+AbandonedShack
+n
+Porch
+---
+AbandonedShack
+e
+OldGasStation
+---
+OldGasStation
+w
+AbandonedShack
+---
+Porch
+s
+AbandonedShack
+---
+Porch
+n:isLocked
+LivingRoom
+---
+LivingRoom
+w
+Kitchen
+---
+Kitchen
+e
+LivingRoom
+---
+LivingRoom
+u
+Bedroom
+---
+Bedroom
+d
+LivingRoom
+---
+LivingRoom
+s
+Porch
+---
+LivingRoom
+d
+Cellar
+---
+Cellar
+u
+LivingRoom
+---
+Cellar
+n:isLocked
+Tunnel
+---
+Tunnel
+s
+Cellar
+---
+Tunnel
+w
+NewTap
+---
+NewTap
+e
+Tunnel
+---
+Tunnel
+e
+TapShaft
+---
+TapShaft
+w
+Tunnel
+---
+Tunnel
+n
+LongStaircase
+---
+LongStaircase
+s
+Tunnel
+---
+LongStaircase
+n
+BreakRoom
+---
+BreakRoom
+s
+LongStaircase
+---
+BreakRoom
+n
+Register
+---
+Register
+s
+BreakRoom
+---
+Register
+w
+MainStore
+---
+MainStore
+e
+Register
+---
+Register
+e
+Bathroom
+---
+Bathroom
+w
+Register
+---
+Register
+n:isLocked
+StorageRoom
+---
+StorageRoom
+s
+Register
+---
+MainStore
+w
+OldGasStation
+---
+===
+Monsters:
+type:Chupacabra
+desc:a dark hairy beast almost the size of a bear. You can never get a good look at it but you know it is always there watching you. It moves quickly and silently like a shadow whenever it strikes.
+dmg:5
+turnTime:2
+pauseTime:4
+currentRoom:OldGasStation
+---
+===

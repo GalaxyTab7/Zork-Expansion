@@ -1,0 +1,3 @@
+class WrongRoomException extends Exception
+{
+}

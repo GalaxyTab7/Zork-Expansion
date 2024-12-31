@@ -1,0 +1,42 @@
+---FEATURES---
+
+Bags: In this dungeon, you are not stuck with a set capacity. Instead, your capacity can increase or decrease as you move around the dungeon.
+There are items throughout the dungeon that once used will increase your capacity, allowing you to carry more items.
+However, be careful with how many items you are carrying. Because if you try to carry more than you can, your bag will rip and you will lose
+5 capacity space.
+
+You can test this by grabbing the FannyPack in the EndlessDesert (e from starting room) taking the FannyPack and then typing "use pack".
+You will then be met with a message indicating your item capacity has increased. 
+---
+Locks: In order to continue through the dungeon, there are doors that must be unlocked and keys to be found. Finding these keys and then unlocking 
+the correct door will allow you to continue through the dungeon. You are also granted a Padlock, which can lock any exit which will be helpful when facing off the monster.
+However, you must find the best possible time to use it because you only get one and you will not be able to unlock it.
+
+You can test this by taking the Padlock in the starting room and typing "useDirection Padlock" for whatever room you want to lock. For example, starting in the car area
+typing "useE Padlock" will permanenty lock the direction east of you. For keys, after you obtain a key you then must navigate to whatever room the locked door is in and 
+type "use KeyName". The door will then be unlocked and your key will disappear.
+---
+Hydration: As you are stuck in the middle of the desert, naturally you must worry about keeping yourseld hydrated. As you move throughout the dungeon
+your hydration level will decrease with every room you move to. Luckly, you are granted a water bottle which you can fill throughout various rooms in
+the dungeon. But be careful, if you run out of hydration it will be game over.
+
+You can test this by typing "take bottle" in the starting room and heading toward TheTap (n,w) from starting room. By then your hydration will have decreased a bit
+which you can see by typing "health". To fill an item you must type "fill itemFrom itemTo" with itemFrom being the item/room you want to fill from and itemTo being
+the item you want to fill. For this example typing "fill Tap bottle" will fill your water bottle. Then by typing "drink bottle" will your hydration be replenished. 
+---
+Hallucinations: Being in a horrible desert, you are going to start hallucinating some things. Some items in the dungeon may seem like helpful items, but will
+disappear in front of your eyes the second you try to use them.
+
+Obtaining these items to test them require spoiling certain aspects of dungeon progression. However, if you have one of these items, trying to use them in any
+cappacity (except taking or dropping) will result in the item disapearing.
+---
+The Monster: There is a monsterous chupacabra coming after you at all times. You will be able to see what direction it is coming from and how many rooms
+away it in order to plan an escape. However, if it catches up to you it will attack you and you will lose some health. You have no way of attacking
+the chubacapra directly but it is weak to locked doors. If you manage to get the chupacabra in a room with only one exit, you can lock it away for good. 
+
+To test this take the Padlock from the starting room and head to the EndlessDesert(e from starting room) then type "useW Padlock" to lock the only exit near
+you and repeadetly type "e" until you notice the chupacabra not being able to get to you. 
+---
+Clear Screen: Lastly as a quality of life improvment we made it so you can clear all prior output from the screen with the only remaining information 
+being the room you are in. Simply type clear to test this feature whenever.
+___

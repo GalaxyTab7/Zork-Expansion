@@ -1,0 +1,3 @@
+class NoMoreMonsters extends Exception
+{
+}
